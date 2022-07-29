@@ -672,7 +672,7 @@ public class Monster {
 		}
 		else
 		{
-			return "MONSTER RAN FROM FIGHT";
+			return "MONSTER RAN FROM FIGHT,COWARD!";
 		}
 	}
 	
