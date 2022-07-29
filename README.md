@@ -1,2 +1,2 @@
-# MonsterFight
+# MonsterFitness
 Text-based Exercise Game
