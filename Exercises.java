@@ -8,7 +8,11 @@ public class Exercises {
 		this.muscleGroup = muscleGroup;
 	}
 	
-	public selectExercises(int entry)
+	
+	//MAKE VULNERABILITY THE EXCERICE WITH LOWEST AMOUNT OF SETS
+	//CREATE SET TRACKER FOR EACH EXERCISE
+	//CREATE DAMAGE ALGORITHM FOR REPS DONE
+	public showExercises(int entry)
 	{
 		if(this.muscleGroup == "Arms")
 		{

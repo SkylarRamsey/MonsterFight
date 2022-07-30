@@ -6,16 +6,14 @@ public class Monster {
 	int maxHP = 0;
 	int currentHP = 0;
 	String type = null;
-	String vulnerability = null;
 	
 	
 	Random rnd = new Random();
 	
-	public Monster(int healthPoints, String type, String vulnerability)
+	public Monster(int healthPoints, String type)
 	{
 		setMaxHP(healthPoints);
 		setType(type);
-		setVulnerability(vulnerability);
 	}
 
 	public static void generateFight()
@@ -158,16 +156,7 @@ public class Monster {
 	public void setType(String type) {
 		this.type = type;
 	}
-
-
-	public String getVulnerability() {
-		return vulnerability;
-	}
-
-
-	public void setVulnerability(String vulnerability) {
-		this.vulnerability = vulnerability;
-	}
+}
 	
 	public String toString()
 	{
