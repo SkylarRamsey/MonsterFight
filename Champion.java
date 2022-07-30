@@ -1,11 +1,11 @@
 package MonsterFitness;
 
 import java.time.LocalDate;
-public class Champion {
+public class Champion { // This is to save data on the user for workout logging and tracking 
 
 	String championName = null;
 	String weaponChoice = null;
-	int monstersDefeated = 0;
+	int monstersDefeated = 0; // increment when a monster is defeated so that it can be saved
 	LocalDate fightDate = null;
 	// make variable for each monster to track number defeated
 

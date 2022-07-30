@@ -19,9 +19,9 @@ public class Monster {
 	public static void generateFight()
 	{
 		Random rnd = new Random();
-		int randomType = rnd.nextInt(16);
-		int randomHP = 0;
-		
+		int randomType = rnd.nextInt(16); // selects random integer out of 1-16, check if 0 counts, will have to fix that
+		int randomHP = 0;					// random integer is used to select the monster
+											//may need to balance hp values more
 		String monsterType = null;
 		
 		if(randomType == 1)
@@ -126,8 +126,9 @@ public class Monster {
 		
 		
 		
-		Monster newMonster = new Monster();
+		Monster newMonster = new Monster(randomHP, randomType);
 		//GOAL IS TO GET EACH EXERCISE TO GET 3 SETS
+		
 	}
 
 	public int getMaxHP() {
@@ -158,7 +159,7 @@ public class Monster {
 	}
 }
 	
-	public String toString()
+	public String toString() // Outputs monster image, stats, title and, a message
 	{
 		if(this.type.equals("BAT"))
 		{
