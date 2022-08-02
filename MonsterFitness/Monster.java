@@ -7,16 +7,16 @@ public class Monster {
 	int currentHP = 0;
 	String type = null;
 	
+	boolean monsterDefeated = false;
 	
 	Random rnd = new Random();
 	
-	public Monster(int healthPoints, String type)
+	public Monster()
 	{
-		setMaxHP(healthPoints);
-		setType(type);
+		
 	}
 
-	public static void generateFight()
+	public void generateFight()
 	{
 		Random rnd = new Random();
 		int randomType = rnd.nextInt(16); // selects random integer out of 1-16, check if 0 counts, will have to fix that
@@ -27,106 +27,108 @@ public class Monster {
 		if(randomType == 1)
 		{
 			monsterType = "BAT";
-			randomHP = rnd.nextInt(10);
+			randomHP = 10;
 		}
 		else if(randomType == 2)
 		{
 			monsterType = "CHILL COW";
-			randomHP = rnd.nextInt(25);
+			randomHP = 25;
 			
 		}
 		else if(randomType == 3)
 		{
 			monsterType = "DAWGS";
-			randomHP = rnd.nextInt(20);
+			randomHP = 20;
 			
 		}
 		else if(randomType == 4 )
 		{
 			monsterType = "GOOSE";
-			randomHP = rnd.nextInt(30);
+			randomHP = 30;
 			
 		}
 		else if(randomType == 5 )
 		{
 			monsterType = "FRAWG WIZARD";
-			randomHP = rnd.nextInt(35);
+			randomHP = 35;
 		}
 		else if(randomType == 6 )
 		{
 			monsterType = "DINO";
-			randomHP = rnd.nextInt(30);
+			randomHP = 30;
 			
 		}
 		else if(randomType == 7 )
 		{
 			monsterType = "DEMON LAWD";
-			randomHP = rnd.nextInt(50);
+			randomHP = 50;
 			
 		}
 		else if(randomType == 8 )
 		{
 			monsterType = "DEMON GENERAL";
-			randomHP = rnd.nextInt(40);
+			randomHP = 40;
 			
 		}
 		else if(randomType == 9 )
 		{
 			monsterType = "ANGEL OF DEATH";
-			randomHP = rnd.nextInt(55);
+			randomHP = 55;
 			
 		}
 		else if(randomType == 10 )
 		{
 			monsterType = "REAPER";
-			randomHP = rnd.nextInt(45);
+			randomHP = 45;
 			
 		}
 		else if(randomType == 11)
 		{
 			monsterType = "VIKING SKELLIE";
-			randomHP = rnd.nextInt(30);
+			randomHP = 30;
 			
 		}
 		else if(randomType == 12)
 		{
 			monsterType = "GRIPPER ALIEN";
-			randomHP = rnd.nextInt(35);
+			randomHP = 35;
 			
 		}
 		else if(randomType == 13)
 		{
 			monsterType = "COWBOY CACTUS";
-			randomHP = rnd.nextInt(25);
+			randomHP = 25;
 			
 		}
 		else if(randomType == 14)
 		{
 			monsterType = "MUSHROOM HOUSE";
-			randomHP = rnd.nextInt(15);
+			randomHP = 15;
 			
 		}
 		else if(randomType == 15)
 		{
 			monsterType = "MUSHROOM";
-			randomHP = rnd.nextInt(30);
+			randomHP = 30;
 			
 		}
 		else if(randomType == 16)
 		{
 			monsterType = "COWBOY";
-			randomHP = rnd.nextInt(40);
+			randomHP = 40;
 			
 		}
 		else if(randomType == 17)
 		{
 			monsterType = "OSTRICH KNIGHT";
-			randomHP = rnd.nextInt(55);
+			randomHP = 55;
 		}
 		
 		
+		setMaxHP(randomHP);
+		setcurrentHP(randomHP);
+		setType(monsterType);
 		
-		Monster newMonster = new Monster(randomHP, randomType);
 		//GOAL IS TO GET EACH EXERCISE TO GET 3 SETS
 		
 	}
@@ -157,13 +159,12 @@ public class Monster {
 	public void setType(String type) {
 		this.type = type;
 	}
-}
 	
 	public String toString() // Outputs monster image, stats, title and, a message
 	{
 		if(this.type.equals("BAT"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 			"   =/\\                 /\\=\r\n"
 			+ "    / \\'._   (\\_/)   _.'/ \\\r\n"
 			+ "   / .''._'--(o.o)--'_.''. \\\r\n"
@@ -171,12 +172,12 @@ public class Monster {
 			+ " /` .' `\\;-,'\\___/',-;/` '. '\\\r\n"
 			+ "/.-'       `\\(-V-)/`       `-.\\\r\n"
 			+ "`            \"   \"   "	
-			+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+			+ "\n ### ITS BATMAN!! GROSS, HIS WEE-WEE IS OUT! BLEGH! ###";
 				
 		}
 		else if(this.type.equals("CHILL COW"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 				"\r\n"
 				+ "            /)  (\\\r\n"
 				+ "        .-._((,~~.))_.-,\r\n"
@@ -193,11 +194,11 @@ public class Monster {
 				+ "       \\_(.-( )--( )-.)_/\r\n"
 				+ "       /_,\\ ) /  \\ ( /._\\\r\n"
 				+ "           /_,\\  /._\\"	 
-				+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+				+ "\n ### SHE'S JUST CHILLING THERE, MENACINGLY!! ###";
 		}
 		else if(this.type.equals("DAWGS"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 					"            /)-_-(\\        /)-_-(\\\r\n"
 					+ "             (o o)          (o o)\r\n"
 					+ "     .-----__/\\o/            \\o/\\__-----.\r\n"
@@ -206,11 +207,11 @@ public class Monster {
 					+ "     \\\\     ||                  ||      \\\\\r\n"
 					+ "     //     ||                  ||      //\r\n"
 					+ "     |\\     |\\                  /|     /|"
-					+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+					+ "\n ### WHY DO THEY LOOK LIKE THAT?? ARE THEY OKAY?? ###";
 		}
 		else if(this.type.equals("GOOSE"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 			"      _.-.\r\n"
 			+ " __.-' ,  \\\r\n"
 			+ "'--'-'._   \\\r\n"
@@ -224,11 +225,11 @@ public class Monster {
 			+ "               \\_|/\r\n"
 			+ "              __|||\r\n"
 			+ "              >__/'"		
-			+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+			+ "\n ### I REALLY WOULD NOT MESS WITH THIS GOOSE HE IS GONNA MESS YOU UP ###";
 		}
 		else if(this.type.equals("FRAWG WIZARD"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 					"                            .-----.\r\n"
 					+ "                            /7  .  (\r\n"
 					+ "                           /   .-.  \\\r\n"
@@ -259,11 +260,11 @@ public class Monster {
 					+ " .-._.-'     '\"  ) .-'   `.                   (  '\"     `-._.--.\r\n"
 					+ "(_________.-====' / .' /\\_)`--..__________..-- `====-. _________)\r\n"
 					+ "                 (.'(.'\r\n"
-					+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+					+ "\n ### HOW DID HE LEARN TO DO MAGIC?? WHO GAVE HIM THAT SICK HAT??? ###";
 		}
 		else if(this.type.equals("DINO"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 					"                                             ____\r\n"
 					+ "  ___                                      .-~. /_\"-._\r\n"
 					+ "`-._~-.                                  / /_ \"~o\\  :Y\r\n"
@@ -286,11 +287,11 @@ public class Monster {
 					+ "                        )  \\\r\n"
 					+ "                  /,`--'~\\--'~\\\r\n"
 					+ "                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n"
-					+ "/n ENTER MONSTER SPECIFIC MESSAGE"; 
+					+ "\n ### I SWEAR I CLOSED THE PARK GATE HOW DID SHE GET OUT HERE?? ###"; 
 		}
 		else if(this.type.equals("DEMON LAWD"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 					"                         ==(W{==========-      /===-                        \r\n"
 					+ "                              ||  (.--.)         /===-_---~~~~~~~~~------____  \r\n"
 					+ "                              | \\_,|**|,__      |===-~___                _,-' `\r\n"
@@ -320,11 +321,11 @@ public class Monster {
 					+ "   ;'( ')/ ,)(                              ~~~~~~~~~~                         \r\n"
 					+ "  ' ') '( (/                                                                   \r\n"
 					+ "    '   '  `"
-					+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+					+ "\n ### THE DRAGON SAID HE HATES THIS GUY, GET HIM!!! ### ";
 		}
 		else if(this.type.equals("DEMON GENERAL"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 			"     .      .\r\n"
 			+ "     |\\____/|\r\n"
 			+ "    (\\|----|/)\r\n"
@@ -346,11 +347,11 @@ public class Monster {
 			+ "      |= || =|\r\n"
 			+ "      |= /\\ =|\r\n"
 			+ "      /_/  \\_\\"	
-			+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+			+ "\n ### PRETTY BUFF DUDE, ASK FOR SOME GYM POINTERS LATER ###";
 		}
 		else if(this.type.equals("ANGEL OF DEATH"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 				"                 /\\\r\n"
 				+ "                 ||\r\n"
 				+ "   ____ (((+))) _||_\r\n"
@@ -366,11 +367,11 @@ public class Monster {
 				+ "        |     |\r\n"
 				+ "        |_____|\r\n"
 				+ "        |_____|"	
-				+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+				+ "\n I HAVE NO IDEA WHO THIS GUY IS, HE JUST SHOWED UP ONE DAY";
 		}
 		else if(this.type.equals("REAPER"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 			"                                       .\"\"--..__\r\n"
 			+ "                     _                     []       ``-.._\r\n"
 			+ "                  .'` `'.                  ||__           `-._\r\n"
@@ -407,11 +408,11 @@ public class Monster {
 			+ "/`                            |        ||    \r\n"
 			+ "`-.___,-.      .-.        ___,'        (/    \r\n"
 			+ "         `---'`   `'----'`"		
-			+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+			+ "\n ### I GUESS ITS YOUR TIME DUDE, UNLESS YOU CAN WORKOUT HARD ENOUGH TO ESCAPE DEATH! ###";
 		}
 		else if(this.type.equals("VIKING SKELLIE"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 				"                             _.--\"\"-._\r\n"
 				+ "  .                         .\"         \".\r\n"
 				+ " / \\    ,^.         /(     Y             |      )\\\r\n"
@@ -450,11 +451,11 @@ public class Monster {
 				+ "                                             |  \\\r\n"
 				+ "                                             |lllj\r\n"
 				+ "                                             |||||  "	
-				+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+				+ "\n ### GOTTA HAVE A SKELINGTON IN YOUR GAME ### ";
 		}
 		else if(this.type.equals("GRIPPER ALIEN"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 					"     .;;;.   .;;;.\r\n"
 					+ "              .;;;.  `:::'  .;;;.\r\n"
 					+ "            .;',:.`;.`;;;'.;'.:.`;.\r\n"
@@ -484,11 +485,11 @@ public class Monster {
 					+ "             _____.;       ;._____\r\n"
 					+ "             )_.-' /       \\ `-._(\r\n"
 					+ "               ).-'         `-.("
-					+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+					+ "\n ### HE KEEPS TRYING TO GRAB PEOPLE, ITS WEIRD! ###";
 		}
 		else if(this.type.equals("COWBOY CACTUS"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 			"              _   _\r\n"
 			+ "             / '-' \\\r\n"
 			+ "            ;       ;\r\n"
@@ -530,11 +531,11 @@ public class Monster {
 			+ "            |   .   |\r\n"
 			+ "            |;   ;  |\r\n"
 			+ "            `\"-----\"`"		
-			+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+			+ "\n ### ACTUALLY A SUPER SICK GUY, DOESN'T TALK MUCH THOUGH ###";
 		}
 		else if(this.type.equals("MUSHROOM HOUSE"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 				"        .\r\n"
 				+ "        ('\r\n"
 				+ "        '|\r\n"
@@ -560,11 +561,11 @@ public class Monster {
 				+ "     :;  |        |      |  |/)\r\n"
 				+ "      ;: `-.._    /__..--'\\.' ;:\r\n"
 				+ "          :;  `--' :;   :;"	
-				+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+				+ "\n ### SMASH IT UP!! THE OWNER OWES ME MONEY! ###";
 		}
 		else if(this.type.equals("MUSHROOM"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 				"                  .-'~~~-.\r\n"
 				+ "                     .'o  oOOOo`.\r\n"
 				+ "                    :~~~-.oOo   o`.\r\n"
@@ -574,11 +575,11 @@ public class Monster {
 				+ "                      ,'  ; ~~--'~\r\n"
 				+ "                      ;  ;\r\n"
 				+ "_______\\|/__________\\\\;_\\\\//___\\|/________"	
-				+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+				+ "\n ### I TOLD YOU NOT TO EAT THAT! WHAT DO YOU MEAN MY FACE IS TURNING PURPLE? YO! STOP HITTING ME!!### ";
 		}
 		else if(this.type.equals("COWBOY"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 					"               ___,\r\n"
 					+ "              __)____)__\r\n"
 					+ "                -)- )))\r\n"
@@ -599,11 +600,11 @@ public class Monster {
 					+ "           \\(       / /  / /\r\n"
 					+ "            )\\     / (  ( <\r\n"
 					+ "   	 ,./_(,, ,/_|    \\_/,,._"
-					+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+					+ "\n ### THIS DUDE CAN EAT A HOTDAWG FASTER THAN HE CAN SHOOT AND HE'S NEVER LOST A DUEL ###";
 		}
 		else if(this.type.equals("OSTRICH KNIGHT"))
 		{
-			return "HP: " + this.currentHP + "/" + this.maxHP + "/n" + this.type +
+			return "HP: " + this.currentHP + "/" + this.maxHP + "\n" + this.type + "\n" +
 					"                                                     _\r\n"
 					+ "                                                     //\r\n"
 					+ "                           _                        //\r\n"
@@ -658,12 +659,26 @@ public class Monster {
 					+ "  \\ ,-,\\,-,`,\r\n"
 					+ "   \\_\\_\\\\\\ \\ \\\r\n"
 					+ "    ~~~~~~~~~~~"
-					+ "/n ENTER MONSTER SPECIFIC MESSAGE";
+					+ "\n ### I KNOW YOU ARE JEALOUS OF HIS RIDE, IT'S OKAY, I AM TOO ###";
 		}
 		else
 		{
 			return "MONSTER RAN FROM FIGHT,COWARD!";
 		}
+	}
+	
+	public void damageMonster(int damage)
+	{
+		currentHP = currentHP - damage;
+		if(currentHP <= 0)
+		{
+			monsterDefeated = true;
+		}
+	}
+	
+	public boolean monsterDefeated()
+	{
+		return monsterDefeated;
 	}
 	
 }

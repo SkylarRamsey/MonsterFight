@@ -11,11 +11,33 @@ public class FightMonsters {
 		Scanner userInput = new Scanner(System.in); // allows us to read user entered data
 		
 		System.out.println("### WELCOME TO MONSTER FITNESS ###");
-		System.out.println("### READY TO FIGHT? ### \n   (Enter Y/N)");
 		
-		String userEntry = userInput.nextLine(); //saves user entry as variable
+		String userEntry = null;
 		
-		if(!(userEntry.toUpperCase().equals("N")))
+		boolean validEntry = false;
+		
+		while(validEntry == false)
+		{
+			System.out.println("### READY TO FIGHT? ### \n   (Enter Y/N)");
+			
+			 userEntry = userInput.nextLine(); //saves user entry as variable
+			 
+			 if(userEntry.toUpperCase().equals("Y"))
+				 {
+				 	validEntry = true;
+				 }
+			 else if(userEntry.toUpperCase().equals("N"))
+			 {
+				 validEntry = true;
+			 }
+			 else
+			 {
+				 System.out.println("### MUST ENTER Y OR N ###");
+			 }
+		}
+
+		
+		if(!(userEntry.toUpperCase().equals("Y")))
 			{
 			System.out.println("### FIGHT AGAIN SOON ###");
 				System.exit(0); // closes program
@@ -26,6 +48,12 @@ public class FightMonsters {
 			System.out.println("### CHAMPION NAME? ###\n    (enter name)"); //gets user name
 			String championName = userInput.nextLine();
 			
+			validEntry = false;
+			
+			String chosenWeapon = "TEST";
+			
+			while(validEntry == false)
+			{
 			System.out.println("### WEAPON FOR TODAY? ###\n    (Chooses muscle group)"); //gets muscle group selection
 			
 			System.out.println("### 1: SWORD ### \n    (Arms)");
@@ -35,15 +63,20 @@ public class FightMonsters {
 			System.out.println("### 5: ENERGY ### \n    (Mobility)");
 			System.out.println("### 6: HORSE ### \n    (Cardio)");
 			
-			boolean validEntry = false;
 			
-			while(validEntry == false)
-			{
+
+				int weaponChoice = 0;
 				System.out.println("### ENTER WEAPON CHOICE ### \n   (Enter the number)");
 				
-				int weaponChoice = Integer.parseInt(userInput.nextLine());
+				try
+				{
+					weaponChoice = Integer.parseInt(userInput.nextLine());
+				}
+				catch(NumberFormatException e)
+				{
+					System.out.println("### MUST ENTER AN INTEGER ###");
+				}
 				//create error handling
-				String chosenWeapon = null;
 				
 				if(weaponChoice == 1)
 				{
@@ -89,10 +122,33 @@ public class FightMonsters {
 			
 			System.out.println("### GET READY TO RUMBLE ###");
 			
-			Monster.generateFight();
-			//ADD IN MONSTER TO FIGHT
-			// MAKE EXERCISE CLASS TO SHOW THEM ALL THEN TAKE IN USER ENTRY FOR EXERCISE SELECTION
-			// ASK FOR REPS
+			Exercises championMoveSet = new Exercises(currentChampion.getWeaponChoice());
+			
+			while(!(championMoveSet.allSetsCompleted))
+			{
+				Monster currentMonster = new Monster();
+				currentMonster.generateFight();
+				while (!(currentMonster.monsterDefeated()))
+				{
+					if(championMoveSet.allSetsCompleted)
+					{
+						System.out.println("### THE CHAMPION HAS DEFEATED ALL TRIALS ###");
+						// enter workout stats here from file output class
+						currentMonster.monsterDefeated = true;
+					}
+					else
+					{
+						System.out.println(currentMonster.toString());
+						
+						championMoveSet.showExercises();
+						currentMonster.damageMonster(championMoveSet.dealDamage());
+					}
+
+				}
+			}
+
+		}
+			//create flag for fight to end
 			//ADD STATS TO FILE AFTER EACH FIGHT
 		
 		userInput.close();
