@@ -65,12 +65,13 @@ public class Exercises {
 			
 			while(validEntry == false)
 			{
+
 				System.out.println("### CHOOSE YOUR MOVE ###");
+				System.out.println("### MAX 3 SETS PER EXERCISE ###");
 				System.out.println("### EXERCISE 1: PUSHUPS/BENCH SETS:" + exerciseSets[0] +" ###");
 				System.out.println("### EXERCISE 2: CURLS SETS:" + exerciseSets[1] + " ###");
 				System.out.println("### EXERCISE 3: SHOULDER RAISES SETS:" + exerciseSets[2] +" ###");
 				System.out.println("### EXERCISE 4: SHOULDER PRESS SETS:" + exerciseSets[3] +" ###");
-				System.out.println("### EXERCISE 5: RUN AWAY ###");
 			
 			System.out.println("### EXERCISE " + (exerciseWithLeastSets + 1) + ": HITS A CRITICAL POINT! ###");
 			vulnerableExercise = exerciseWithLeastSets + 1;
@@ -78,7 +79,31 @@ public class Exercises {
 			try
 			{
 				entry = Integer.parseInt(userInput.nextLine());
-				validEntry = true;
+				
+				if( entry == 1 && exerciseSets[0] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 2 && exerciseSets[1] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 3 && exerciseSets[2] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 4 && exerciseSets[3] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else
+				{
+					validEntry = true;
+				}
 			}
 			catch(NumberFormatException e)
 			{
@@ -366,7 +391,31 @@ public class Exercises {
 			try
 			{
 				entry = Integer.parseInt(userInput.nextLine());
-				validEntry = true;
+				
+				if( entry == 1 && exerciseSets[0] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 2 && exerciseSets[1] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 3 && exerciseSets[2] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 4 && exerciseSets[3] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else
+				{
+					validEntry = true;
+				}
 			}
 			catch(NumberFormatException e)
 			{
@@ -652,7 +701,31 @@ public class Exercises {
 			try
 			{
 				entry = Integer.parseInt(userInput.nextLine());
-				validEntry = true;
+
+				if( entry == 1 && exerciseSets[0] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 2 && exerciseSets[1] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 3 && exerciseSets[2] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 4 && exerciseSets[3] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else
+				{
+					validEntry = true;
+				}
 			}
 			catch(NumberFormatException e)
 			{
@@ -936,7 +1009,31 @@ public class Exercises {
 			try
 			{
 				entry = Integer.parseInt(userInput.nextLine());
-				validEntry = true;
+
+				if( entry == 1 && exerciseSets[0] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 2 && exerciseSets[1] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 3 && exerciseSets[2] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 4 && exerciseSets[3] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else
+				{
+					validEntry = true;
+				}
 			}
 			catch(NumberFormatException e)
 			{
@@ -1224,7 +1321,31 @@ public class Exercises {
 			try
 			{
 				entry = Integer.parseInt(userInput.nextLine());
-				validEntry = true;
+
+				if( entry == 1 && exerciseSets[0] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 2 && exerciseSets[1] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 3 && exerciseSets[2] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 4 && exerciseSets[3] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else
+				{
+					validEntry = true;
+				}
 			}
 			catch(NumberFormatException e)
 			{
@@ -1509,7 +1630,31 @@ public class Exercises {
 			try
 			{
 				entry = Integer.parseInt(userInput.nextLine());
-				validEntry = true;
+
+				if( entry == 1 && exerciseSets[0] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 2 && exerciseSets[1] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 3 && exerciseSets[2] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else if( entry == 4 && exerciseSets[3] == 3)
+				{
+					System.out.println("### YOU HAVE COMPLETED THIS EXERCISE ###");
+					validEntry = false;
+				}
+				else
+				{
+					validEntry = true;
+				}
 			}
 			catch(NumberFormatException e)
 			{
