@@ -383,7 +383,6 @@ public class Exercises {
 				System.out.println("### EXERCISE 2: ROWS SETS:" + exerciseSets[1] + " ###");
 				System.out.println("### EXERCISE 3: DEADLIFT SETS:" + exerciseSets[2] +" ###");
 				System.out.println("### EXERCISE 4: PULL-UP HOLD SETS:" + exerciseSets[3] +" ###");
-				System.out.println("### EXERCISE 5: RUN AWAY ###");
 			
 			System.out.println("### EXERCISE " + (exerciseWithLeastSets + 1) + ": HITS A CRITICAL POINT! ###");
 			vulnerableExercise = exerciseWithLeastSets + 1;
@@ -693,7 +692,6 @@ public class Exercises {
 				System.out.println("### EXERCISE 2: PLANK SETS:" + exerciseSets[1] + " ###");
 				System.out.println("### EXERCISE 3: TWISTS SETS:" + exerciseSets[2] +" ###");
 				System.out.println("### EXERCISE 4: SIDE CRUNCHES SETS:" + exerciseSets[3] +" ###");
-				System.out.println("### EXERCISE 5: RUN AWAY ###");
 			
 			System.out.println("### EXERCISE " + (exerciseWithLeastSets + 1) + ": HITS A CRITICAL POINT! ###");
 			vulnerableExercise = exerciseWithLeastSets + 1;
@@ -1001,7 +999,6 @@ public class Exercises {
 				System.out.println("### EXERCISE 2: SIDE SPLIT SETS:" + exerciseSets[1] + " ###");
 				System.out.println("### EXERCISE 3: TOE TOUCH SETS:" + exerciseSets[2] +" ###");
 				System.out.println("### EXERCISE 4: DEEP SQUAT SETS:" + exerciseSets[3] +" ###");
-				System.out.println("### EXERCISE 5: RUN AWAY ###");
 				
 			System.out.println("### EXERCISE " + (exerciseWithLeastSets + 1) + ": HITS A CRITICAL POINT! ###");
 			vulnerableExercise = exerciseWithLeastSets + 1;
@@ -1313,7 +1310,6 @@ public class Exercises {
 				System.out.println("### EXERCISE 2: LUNGE SETS:" + exerciseSets[1] + " ###");
 				System.out.println("### EXERCISE 3: WALL SIT SETS:" + exerciseSets[2] +" ###");
 				System.out.println("### EXERCISE 4: CALF RAISES SETS:" + exerciseSets[3] +" ###");
-				System.out.println("### EXERCISE 5: RUN AWAY ###");
 				
 			System.out.println("### EXERCISE " + (exerciseWithLeastSets + 1) + ": HITS A CRITICAL POINT! ###");
 			vulnerableExercise = exerciseWithLeastSets + 1;
@@ -1623,7 +1619,6 @@ public class Exercises {
 			System.out.println("### EXERCISE 2: HIGH KNEES SETS:" + exerciseSets[1] + " ###");
 			System.out.println("### EXERCISE 3: MOUNTAIN CLIMBERS SETS:" + exerciseSets[2] +" ###");
 			System.out.println("### EXERCISE 4: JUMPING JACKS SETS:" + exerciseSets[3] +" ###");
-			System.out.println("### EXERCISE 5: RUN AWAY ###");
 			
 			System.out.println("### EXERCISE " + (exerciseWithLeastSets + 1) + ": HITS A CRITICAL POINT! ###");
 			
